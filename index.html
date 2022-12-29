@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de repaso CSS</title>
+
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 600;
+        }
+
+        /* ejercicio 5 */
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 15rem;
+            font-weight: 800;
+            background-image: url(pic/asdasxasx.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
+        p {
+            font-size: x-large;
+        }
+
+        /* ejercicio 1 */
+
+        .contenedor_de_ejercicio {
+            background-color: rgba(255, 255, 255, 0.903);
+            margin: 2rem;
+            padding: 4rem;
+            width: 35%;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #boton1 {
+            height: 250px;
+            width: 250px;
+            background-color: rgb(122, 255, 122);
+            border: none;
+            border-radius: 25px;
+
+        }
+
+        #boton1:hover {
+            background-color: rgb(53, 163, 53);
+            rotate: z -45deg;
+            transition: 1s;
+        }
+
+
+
+        /* ejercicio 2 */
+
+        #cuadro1 {
+            height: 250px;
+            width: 250px;
+            background-color: darkgray;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #circulo1 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+
+            animation: colorines 20s linear infinite normal;
+        }
+
+        @keyframes colorines {
+            0% {
+                background-color: rgb(255, 106, 131);
+            }
+
+            20% {
+                background-color: rgb(201, 143, 255);
+            }
+
+            45% {
+                background-color: rgb(253, 139, 97);
+            }
+
+            95% {
+                background-color: rgb(72, 72, 254);
+            }
+        }
+
+        /* ejercico 3 */
+
+        #titulo1 {
+            font-weight: 200;
+        }
+
+        #titulo1:hover {
+            animation: moverse2 3s linear infinite;
+        }
+
+        @keyframes moverse2 {
+            from {
+                transform: translate(0px, 0px);
+            }
+
+            to {
+                transform: translate(300px, 0px);
+            }
+        }
+
+        /* ejercicio 4 */
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            animation: cambiobackground 15s linear infinite normal;
+        }
+
+        @keyframes cambiobackground {
+            10% {
+                background-color: cornflowerblue;
+            }
+
+            30% {
+                background-color: rgb(238, 122, 254);
+            }
+
+            50% {
+                background-color: rgb(210, 70, 70);
+            }
+
+            70% {
+                background-color: rgb(255, 202, 69);
+            }
+
+            90% {
+                background-color: rgb(15, 77, 15);
+            }
+        }
+
+        /* ejercicio 6 */
+        #cuadro2 {
+            height: 250px;
+            width: 250px;
+            background-color: rgb(233, 209, 73);
+            border-radius: 25px;
+            animation: rotar180 5s linear infinite;
+        }
+
+        @keyframes rotar180 {
+            from {
+                transform-origin: top right;
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform-origin: top right;
+                transform: rotate(180deg);
+            }
+
+        }
+
+        /* ejercicio 7 */
+
+        #fotoincreible {
+            border-radius: 50%;
+        }
+
+        /* ejercicio 8 */
+        #tituloneon {
+            padding: 3em;
+            color: rgb(79, 184, 79);
+            text-shadow: 0px 0px 25px rgb(50, 107, 50);
+            background-color: rgb(0, 0, 0);
+            border-radius: 25px;
+        }
+
+        /* ejercicio 9 */
+
+        #cajagato {
+            border: dashed 5px salmon;
+            width: 500px;
+            height: 500px;
+
+        }
+
+        #gato {
+            animation: gatotruco 10s linear infinite normal;
+            position: relative;
+        }
+
+        @keyframes gatotruco {
+            0% {
+                top: -10%;
+                left: -10%;
+                width:200px;
+            }
+
+            25% {
+                top: -7%;
+                left: 75%;
+                width:170px;
+            }
+
+            50% {
+                top: 75%;
+                left: 75%;
+                width:200px;
+            }
+
+            75% {
+
+                top: 75%;
+                left: -10%;
+                width:170px;
+            }
+
+            100% {
+                top: -10%;
+                left: -10%;
+                width:200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>EJERCICIOS DE REPASO CAPITULO 2</h1>
+    <!-- Boton que cambie de color y rote 45º en el eje z al pasar el cursor -->
+
+    <div class="contenedor_de_ejercicio">
+        <p>Ejercicio 1</p><br>
+        <button id="boton1">xd</button>
+    </div>
+
+    <!-- Un cuadro de 250x250px de color darkgray tiene que tener un circulo en el
+         centro y ese circulo, con una animacion tiene que cambiar
+          entre 4 colores automaticamente -->
+
+    <div class="contenedor_de_ejercicio">
+        <p>Ejercicio 2</p><br>
+        <div id="cuadro1">
+            <div id="circulo1"></div>
+        </div>
+    </div>
+
+
+
+    <div class="contenedor_de_ejercicio">
+        <p>Ejercicio 3</p><br>
+        <h2 id="titulo1">Hola buenas soy un titulo que se mueve</h2>
+    </div>
+
+    <!-- Una caja que gira 180º desde la esquina superior derecha en el eje z -->
+
+    <div class="contenedor_de_ejercicio">
+        <p>Ejercicio 6</p><br>
+        <div id="cuadro2"></div>
+    </div>
+
+    <!-- ejercicio 7 -->
+
+    <div class="contenedor_de_ejercicio">
+        <p>Ejercicio 7 </p><br>
+        <img id="fotoincreible" src="pic/qwd.png" alt="when you dont know" onmouseover="this.src='pic/SSDFdf.png'"
+            onmouseout="this.src='pic/qwd.png'">
+    </div>
+
+    <!-- ejercicio 8 -->
+
+    <div class="contenedor_de_ejercicio">
+        <p>Ejercicio 8</p>
+        <h2 id="tituloneon">Mirame... Brillo como un neon!</h2>
+    </div>
+
+
+    <!-- ejercicio 8 -->
+
+    <div class="contenedor_de_ejercicio">
+        <p>Ejercicio 9</p>
+        <div id="cajagato">
+            <img id="gato" src="pic/caaaat.png" alt="#">
+        </div>
+
+    </div>
+
+    <!-- ejercicio 8 -->
+
+    <div class="contenedor_de_ejercicio"></div>
+
+</body>
+
+</html>
